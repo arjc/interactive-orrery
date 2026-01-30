@@ -1,10 +1,10 @@
 import Hero from "./components/Hero.jsx"
 import { Canvas } from "@react-three/fiber"
-import { Line, Sphere, Ring, OrbitControls } from "@react-three/drei"
+import { Html, Line, Sphere, Ring, OrbitControls } from "@react-three/drei"
 
-function Orbit({ rad, col }) {
+function PlanetPath({ rad, col }) {
   const points = []
-  const nLineSegments = 128
+  const nLineSegments = 64
   for (let i = 0; i <= nLineSegments; i++) {
     const theta = (i / nLineSegments) * Math.PI * 2
     points.push([Math.cos(theta) * rad, 0, Math.sin(theta) * rad])
@@ -27,44 +27,57 @@ function App() {
           <meshStandardMaterial color="#fff" />
         </Sphere>
 
-        <Orbit rad={3} col={'#ff0000'}/>
 
 
+        <PlanetPath rad={3.9} col={'#ff0'} />
         {/* Mercury */}
         <Sphere args={[0.0035, 32, 32]} position={[3.9, 0, 0]}>
           <meshStandardMaterial color="#ff0" />
         </Sphere>
 
+        <PlanetPath rad={7.2} col={'#aa3'} />
         {/* Andi (Venus) */}
         <Sphere args={[0.0087, 32, 32]} position={[7.2, 0, 0]}>
-          <meshStandardMaterial color="#ff3" />
+          <meshStandardMaterial color="#aa3" />
         </Sphere>
 
+        <PlanetPath rad={10} col={'#00f'} />
         {/* Bhoomi */}
         <Sphere args={[0.0092, 32, 32]} position={[10, 0, 0]}>
           <meshStandardMaterial color="#00f" />
         </Sphere>
 
+        <PlanetPath rad={15.2} col={'#00f'} />
         {/* MARZ */}
         <Sphere args={[0.0049, 32, 32]} position={[15.2, 0, 0]}>
           <meshStandardMaterial color="#f00" />
         </Sphere>
 
+        <PlanetPath rad={52} col={'#00f'} />
         {/* Joopiter mazhanayam */}
         <Sphere args={[0.1, 32, 32]} position={[52, 0, 0]}>
           <meshStandardMaterial color="#431" />
         </Sphere>
 
+        <Html position={[3, 0.5, 0]} center>
+          <div style={{ color: 'white', fontSize: '14px', whiteSpace: 'nowrap', zIndex: -5 }} className="">
+            Mercury
+          </div>
+        </Html>
+
+        <PlanetPath rad={95.4} col={'#00f'} />
         {/* Saturn */}
         <Sphere args={[0.084, 32, 32]} position={[95.4, 0, 0]}>
           <meshStandardMaterial color="#666" />
         </Sphere>
 
+        <PlanetPath rad={192} col={'#00f'} />
         {/* Ur Anus */}
         <Sphere args={[0.037, 32, 32]} position={[192, 0, 0]}>
           <meshStandardMaterial color="#0ef" />
         </Sphere>
 
+        <PlanetPath rad={300.6} col={'#00f'} />
         {/* Neptune */}
         <Sphere args={[0.035, 32, 32]} position={[300.6, 0, 0]}>
           <meshStandardMaterial color="#1af" />
