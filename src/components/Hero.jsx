@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className={` ${overlayVisible ? "translate-y-0" : "translate-y-full"} 
                       fixed inset-0 flex flex-col items-center 
-                      text-white transition-all duration-700 bg-black overflow-y-auto`}>
+                      text-white transition-all duration-700 bg-gray-950 overflow-y-auto`}>
 
       <div className="my-20 text-center">
         <img src="" alt="Tharakam logo" />
