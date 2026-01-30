@@ -21,6 +21,119 @@
 // 149,600,000 * rau = planet radius
 
 
-export default solarPlanets = [
-    {id: 3, name: 'Earth', col: '#A2653E', au: 1},
-]
+export const solarPlanets = [
+  // id: (1=Mercury … 8=Neptune)
+  {
+    id: 1,
+    name: "Mercury",
+    col: "#B1B1B1",
+    au: 0.387,       // average distance in AU
+    rau: 0.0000185,  // radius in AU (radius ~2,440 km)
+  },
+  {
+    id: 2,
+    name: "Venus",
+    col: "#EED5B7",
+    au: 0.723,
+    rau: 0.0000475,  // radius ~6,052 km
+  },
+  {
+    id: 3,
+    name: "Earth",
+    col: "#A2653E",
+    au: 1,
+    rau: 0.0000405,  // radius ~6,371 km
+  },
+  {
+    id: 4,
+    name: "Mars",
+    col: "#C1440E",
+    au: 1.524,
+    rau: 0.0000216,  // radius ~3,390 km
+  },
+  {
+    id: 5,
+    name: "Jupiter",
+    col: "#D4A76A",
+    au: 5.203,
+    rau: 0.000464,   // radius ~69,911 km
+  },
+  {
+    id: 6,
+    name: "Saturn",
+    col: "#E8D3A4",
+    au: 9.537,
+    rau: 0.000391,   // radius ~58,232 km
+  },
+  {
+    id: 7,
+    name: "Uranus",
+    col: "#7FDBFF",
+    au: 19.191,
+    rau: 0.000168,   // radius ~25,362 km
+  },
+  {
+    id: 8,
+    name: "Neptune",
+    col: "#0054A6",
+    au: 30.068,
+    rau: 0.000165,   // radius ~24,622 km
+  },
+];
+
+
+
+
+// <PlanetPath rad={3.9} col={'#ff0'} />
+// {/* Mercury */}
+// <Sphere args={[0.0035, 32, 32]} position={[3.9, 0, 0]}>
+//   <meshStandardMaterial color="#ff0" />
+// </Sphere>
+
+// <PlanetPath rad={7.2} col={'#aa3'} />
+// {/* Andi (Venus) */}
+// <Sphere args={[0.0087, 32, 32]} position={[7.2, 0, 0]}>
+//   <meshStandardMaterial color="#aa3" />
+// </Sphere>
+
+// <PlanetPath rad={10} col={'#00f'} />
+// {/* Bhoomi */}
+// <Sphere args={[0.0092, 32, 32]} position={[10, 0, 0]}>
+//   <meshStandardMaterial color="#00f" />
+// </Sphere>
+
+// <PlanetPath rad={15.2} col={'#00f'} />
+// {/* MARZ */}
+// <Sphere args={[0.0049, 32, 32]} position={[15.2, 0, 0]}>
+//   <meshStandardMaterial color="#f00" />
+// </Sphere>
+
+// <PlanetPath rad={52} col={'#00f'} />
+// {/* Joopiter mazhanayam */}
+// <Sphere args={[0.1, 32, 32]} position={[52, 0, 0]}>
+//   <meshStandardMaterial color="#431" />
+// </Sphere>
+
+// <Html position={[3, 0.5, 0]} center>
+//   <div style={{ color: 'white', fontSize: '14px', whiteSpace: 'nowrap'}} className="">
+//     Mercury
+//   </div>
+// </Html>
+
+// <PlanetPath rad={95.4} col={'#00f'} />
+// {/* Saturn */}
+// <Sphere args={[0.084, 32, 32]} position={[95.4, 0, 0]}>
+//   <meshStandardMaterial color="#666" />
+// </Sphere>
+
+// <PlanetPath rad={192} col={'#00f'} />
+// {/* Ur Anus */}
+// <Sphere args={[0.037, 32, 32]} position={[192, 0, 0]}>
+//   <meshStandardMaterial color="#0ef" />
+// </Sphere>
+
+// <PlanetPath rad={300.6} col={'#00f'} />
+// {/* Neptune */}
+// <Sphere args={[0.035, 32, 32]} position={[300.6, 0, 0]}>
+//   <meshStandardMaterial color="#1af" />
+// </Sphere>

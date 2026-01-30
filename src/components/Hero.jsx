@@ -1,6 +1,7 @@
 import { useState } from "react"
 import cookie from '/transparent/diabeto.webp'
 import omg from '/transparent/omg.webp'
+import tharakam from '/transparent/title.png'
 
 const Hero = () => {
   const [overlayVisible, setOverlayVisibility] = useState(true);
@@ -11,7 +12,7 @@ const Hero = () => {
                       text-white transition-all duration-700 bg-gray-950 overflow-y-auto`}>
 
       <div className="my-20 text-center">
-        <img src="" alt="Tharakam logo" />
+        <img src={tharakam} alt="Tharakam logo" />
         <h1>Interactive Orrery 2026</h1>
       </div>
 
