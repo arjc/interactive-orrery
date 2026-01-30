@@ -22,62 +22,61 @@
 
 
 export const solarPlanets = [
-  // id: (1=Mercury … 8=Neptune)
   {
     id: 1,
     name: "Mercury",
-    col: "#B1B1B1",
-    au: 0.387,       // average distance in AU
-    rau: 0.0000185,  // radius in AU (radius ~2,440 km)
+    col: "#B1B1B1", // BIBI KUTTY REFERENCE 
+    au: 0.387,
+    rau: 0.0000185, 
   },
   {
     id: 2,
     name: "Venus",
     col: "#EED5B7",
     au: 0.723,
-    rau: 0.0000475,  // radius ~6,052 km
+    rau: 0.0000475, 
   },
   {
     id: 3,
     name: "Earth",
     col: "#A2653E",
     au: 1,
-    rau: 0.0000405,  // radius ~6,371 km
+    rau: 0.0000405, 
   },
   {
     id: 4,
     name: "Mars",
     col: "#C1440E",
     au: 1.524,
-    rau: 0.0000216,  // radius ~3,390 km
+    rau: 0.0000216,
   },
   {
     id: 5,
     name: "Jupiter",
     col: "#D4A76A",
     au: 5.203,
-    rau: 0.000464,   // radius ~69,911 km
+    rau: 0.000464,
   },
   {
     id: 6,
     name: "Saturn",
     col: "#E8D3A4",
     au: 9.537,
-    rau: 0.000391,   // radius ~58,232 km
+    rau: 0.000391,
   },
   {
     id: 7,
     name: "Uranus",
     col: "#7FDBFF",
     au: 19.191,
-    rau: 0.000168,   // radius ~25,362 km
+    rau: 0.000168,
   },
   {
     id: 8,
     name: "Neptune",
     col: "#0054A6",
     au: 30.068,
-    rau: 0.000165,   // radius ~24,622 km
+    rau: 0.000165,
   },
 ];
 
