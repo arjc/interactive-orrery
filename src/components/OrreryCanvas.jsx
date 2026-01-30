@@ -16,7 +16,7 @@ function RenderRadialRadialPath({ rad, col = "#fff" }) {
 const OrreryCanvas = () => {
     return (
         <Canvas
-            camera={{ position: [-40, 10, 30], fov: 50, near: 0.1, far: 1000 }}
+            camera={{ position: [-40, 10, 30], fov: 30, near: 0.1, far: 9999 }}
             className="w-screen h-screen bg-black cursor-grab active:cursor-grabbing"
         >
             <ambientLight intensity={5} />
@@ -26,12 +26,15 @@ const OrreryCanvas = () => {
             <Sphere args={[2, 32, 32]} position={[0, 0, 0]}>
                 <meshStandardMaterial color="#fff" />
             </Sphere>
+            <Html key={"suryan"} position={[0, 0, 0]}>
+                <span className="text-white bg-gray-900 font-mono px-2">Sun</span>
+            </Html>
 
             {solarPlanets.map((planet) => (
                 <>
-                    <RenderRadialRadialPath rad={planet.au * 14.96} col={planet.col}/>
+                    <RenderRadialRadialPath rad={planet.au * 14.96} col={planet.col} />
                     <Html key={planet.name + "tag"} position={[planet.au * 14.96, 0, 0]}>
-                        <span className="text-white bg-gray-900 font-mono ">{planet.name}</span>
+                        <span className="bg-gray-900 font-mono px-2" style={{color: planet.col}}>{planet.name}</span>
                     </Html>
 
                     <Sphere key={planet.name + "name"} args={[planet.rau * 1496, 32, 32]} position={[planet.au * 14.96, 0, 0]}>
@@ -40,7 +43,7 @@ const OrreryCanvas = () => {
                 </>
             ))}
 
-            <OrbitControls />
+            <OrbitControls minDistance={5} maxDistance={1000} />
         </Canvas>
     )
 }
