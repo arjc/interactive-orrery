@@ -1,27 +1,35 @@
 import Hero from "./components/Hero.jsx"
 import { Canvas } from "@react-three/fiber"
-import { Sphere, Ring, OrbitControls } from "@react-three/drei"
+import { Line, Sphere, Ring, OrbitControls } from "@react-three/drei"
+
+function Orbit({ rad, col }) {
+  const points = []
+  const nLineSegments = 128
+  for (let i = 0; i <= nLineSegments; i++) {
+    const theta = (i / nLineSegments) * Math.PI * 2
+    points.push([Math.cos(theta) * rad, 0, Math.sin(theta) * rad])
+  }
+  return <Line points={points} color={col} lineWidth={1} transparent opacity={0.3} />
+}
 
 function App() {
   return (
     <>
-      <Canvas 
-        camera={{position: [0, 0, 30], fov: 50, near: 0.1, far: 1000}}  
+      <Canvas
+        camera={{ position: [0, 0, 30], fov: 50, near: 0.1, far: 1000 }}
         className="w-screen h-screen bg-black cursor-grab active:cursor-grabbing"
       >
         <ambientLight intensity={5} />
         <pointLight position={[10, 10, 10]} />
-        
+
         {/* Suryan */}
         <Sphere args={[2, 32, 32]} position={[0, 0, 0]}>
           <meshStandardMaterial color="#fff" />
         </Sphere>
 
-        <Ring args={[0.1, 5, 64]} position={[0, 0, 0]} >
-          <meshStandardMaterial color="#ff0" />
-        </Ring>
+        <Orbit rad={3} col={'#ff0000'}/>
 
-        
+
         {/* Mercury */}
         <Sphere args={[0.0035, 32, 32]} position={[3.9, 0, 0]}>
           <meshStandardMaterial color="#ff0" />
@@ -31,7 +39,7 @@ function App() {
         <Sphere args={[0.0087, 32, 32]} position={[7.2, 0, 0]}>
           <meshStandardMaterial color="#ff3" />
         </Sphere>
-        
+
         {/* Bhoomi */}
         <Sphere args={[0.0092, 32, 32]} position={[10, 0, 0]}>
           <meshStandardMaterial color="#00f" />
@@ -61,7 +69,7 @@ function App() {
         <Sphere args={[0.035, 32, 32]} position={[300.6, 0, 0]}>
           <meshStandardMaterial color="#1af" />
         </Sphere>
-        
+
         <OrbitControls />
       </Canvas>
       <Hero />
