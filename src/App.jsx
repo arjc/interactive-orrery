@@ -1,33 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Hero from "./components/Hero.jsx"
+import { Canvas } from "@react-three/fiber"
+import { Sphere, OrbitControls } from "@react-three/drei"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Canvas 
+        camera={{position: [0, 2, 5], fov: 50, near: 0.1, far: 100}}  
+        className="w-screen h-screen bg-black cursor-grab active:cursor-grabbing"
+      >
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} />
+        
+        <Sphere args={[1, 32, 32]} position={[-2, 0, 0]}>
+          <meshStandardMaterial color="#eee" />
+        </Sphere>
+        
+        <Sphere args={[1, 32, 32]} position={[0, 0, 0]}>
+          <meshStandardMaterial color="#eee" />
+        </Sphere>
+        
+        <Sphere args={[1, 32, 32]} position={[2, 0, 0]}>
+          <meshStandardMaterial color="#eee" />
+        </Sphere>
+        
+        <OrbitControls />
+      </Canvas>
+      <Hero />
     </>
   )
 }
