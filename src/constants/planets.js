@@ -4,7 +4,7 @@
 
 // === tollerance ===
 // Here, I am multiplying planet au with earth distance from sun to get the total distance of the planet from the sun
-// Problem: I only use two decimal points so the precicion is lower and room for error is more
+// Problem: I only use two decimal points so the precision is lower and room for error is more
 
 // ie., au of mercury = 0.39
 // distance of mercury from sun = 57,900,000 

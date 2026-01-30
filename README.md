@@ -5,8 +5,9 @@ this is a remake of the [project](https://www.github.com/nosebyte/nosebyte.githu
 # Research, Refference and Data
 
 ## Tollerance
-Here, I am multiplying planet au with earth distance from sun to get the total distance of the planet from the sun
-Problem: I only use two decimal points so the precicion is lower and room for error is more
+
+Here, I am multiplying planet au with earth distance from sun, so that I can get the total distance of the planet from the sun
+Problem: I only use two decimal points so the precision is lower and room for error is more
 
 ie., au of mercury = 0.39
 distance of mercury from sun = 57,900,000 
@@ -17,6 +18,10 @@ since error is modulus of [(meashured - correct ) / correct] * 100
 total tolarance of mercury will be = +- 0.77%
 
 similarly, if we take the average of all planets we get +- 0.22% to be the tolerance of this method, which is to be noted for accurate scale...
+
+```
+au arr = []
+```
 
 ## All planets are to scale as per the nasa
 
