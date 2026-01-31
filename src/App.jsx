@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <marquee className="fixed t-0 l-0 w-screen text-white z-10 font-mono opacity-60">
-        Work in progress. Planetary revolution, rotation, and eliptical orbits will be implemented later on. 
+        Work in progress. Planetary revolution, rotation, and eliptical orbits will be implemented later on.
       </marquee>
       <OrreryCanvas
         isOrbitVisible={orbitVisibility}
@@ -30,8 +30,8 @@ function App() {
         isOrbitVisible={orbitVisibility}
         toggleLabel={() => setLabelVisibility(c => !c)}
         isLabelVisible={labelVisibility}
-        
-        resetView={() => resetView()}
+
+        resetView={() => pass} // jan 29 26 ====================================
       />
       <OverlayInterface
         isComponentVisible={overlayVisibility}

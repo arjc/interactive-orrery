@@ -7,14 +7,14 @@ const OverlayInterface = ({ isComponentVisible, closeOverlay }) => {
 
   return (
     <>
-        <div className={` ${isComponentVisible ? "translate-y-0" : "translate-y-full"} 
-                      fixed inset-0 flex flex-col items-center 
-                      text-white transition-all duration-700 bg-gray-950 overflow-y-auto`}>
+      <div className={` ${isComponentVisible ? "translate-y-0" : "translate-y-full"} 
+                      fixed inset-0 flex flex-col items-center transition-all
+                      text-white duration-700 bg-[#040404] overflow-y-auto`}>
 
         <div className='p-10'>
-          <div className="my-20">
+          <div className="my-20 text-right">
             <img src={tharakam} alt="Tharakam logo" />
-            <span className='font-mono'>Interactive Orrery 2026</span>
+            <span className='font-mono'>====&gt; Neo <abbr title='Near earth objects'>NEOs</abbr> and Solar Interactive Orrery 2026. Made with <span className='text-red-400'>♥</span> by Arjun M Liji</span>
           </div>
 
           <div className="flex flex-col items-center gap-5">
@@ -36,9 +36,18 @@ const OverlayInterface = ({ isComponentVisible, closeOverlay }) => {
               <ul>
                 <li>An orrery is a mechanical, usually clockwork-driven, model of the solar system that demonstrates the orbital motions of planets and moons around the Sun </li>
                 <li>An Interactive (Digital) Orrery is where we can move around and modify the cellestial bodies to our desired thing.</li>
-                <li>Use your mouse to interact with the orrery</li>
               </ul>
             </div>
+
+            <div className="my-20">
+              <h1 className="gimme-head-sm">Is this how really it looks in space?</h1>
+              <ul>
+                <li>No, not per se... The scale of this orrery is very rough and calulalations have an average of &plusmn; 0.22% variation.</li>
+                <li>I calculate the planet's radius and length bu using the astronaumical unit (AU) and take difference with the earth's AU to in 2 decimal places.</li>
+                <li>This is the main cause of the variation and it is there due to simple performance optimisations.</li>
+              </ul>
+            </div>
+
           </div>
 
           <Cookie />

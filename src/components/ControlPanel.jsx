@@ -29,8 +29,8 @@ const ControlPanel = ({ showOverlay, toggleOrbit, isOrbitVisible, toggleLabel, i
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-5 border p-5 w-40 text-sm">
-                    <div>
+                <div className="flex flex-col gap-1 border p-3 w-40 text-sm">
+                    <div className="leading-[0.8em]">
                         Simulation Speed:-
                         <span className="opacity-50 text-[0.7em]">(WIP)</span>
                     </div>
