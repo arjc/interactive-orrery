@@ -12,13 +12,13 @@ const OverlayInterface = ({ isComponentVisible, closeOverlay }) => {
                       text-white transition-all duration-700 bg-gray-950 overflow-y-auto`}>
 
         <div className='p-10'>
-          <div className="my-20 text-center">
+          <div className="my-20">
             <img src={tharakam} alt="Tharakam logo" />
-            <h1>Interactive Orrery 2026</h1>
+            <span className='font-mono'>Interactive Orrery 2026</span>
           </div>
 
           <div className="flex flex-col items-center gap-5">
-            <span onClick={closeOverlay} className="button button-sm">Enter</span>
+            <span onClick={closeOverlay} className="button button-xl font-mono text-2xl">Enter Simulation</span>
           </div>
 
           <div>

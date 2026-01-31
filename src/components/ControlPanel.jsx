@@ -12,12 +12,28 @@ const ControlPanel = ({ showOverlay, toggleOrbit, isOrbitVisible, toggleLabel, i
 
             {/* <span className="h-30"></span> */}
             <div className="flex md:flex-col flex-wrap items-center justify-center md:gap-5">
-                <span className="button button-sm w-30 md:w-50" onClick={showOverlay}>Home</span>
-                <span className={`${isOrbitVisible && 'active'} button button-indicator button-sm w-30 md:w-50`} onClick={toggleOrbit}>Orbits</span>
-                <span className={`${isLabelVisible && 'active'} button button-indicator button-sm w-30 md:w-50`} onClick={toggleLabel}>Label</span>
-                <span className="button button-sm w-30 md:w-50" onClick={resetView}>(WIP)</span>
-                <div className="flex flex-col gap-5 border p-5 w-60">
-                    <span>Simulation Speed:- (WIP)</span>
+                <span className="button button-sm w-30 md:w-40" onClick={showOverlay}>Home</span>
+                <span className="button button-sm w-30 md:w-40" onClick={resetView}>Reset (WIP)</span>
+                <div className="flex flex-col">
+                    <div className="w-30 md:w-50 flex items-center justify-evenly" onClick={toggleLabel}>
+                        <label className={`${isLabelVisible && 'active'} indicator`}></label>
+                        <span className={`${isLabelVisible && 'opacity-50 invert'} button button-indicator button-sm w-30`}>
+                            Label
+                        </span>
+                    </div>
+                    <div className="w-30 md:w-50 flex items-center justify-evenly" onClick={toggleOrbit}>
+                        <label className={`${isOrbitVisible && 'active'} indicator`}></label>
+                        <span className={`${isOrbitVisible && 'opacity-50 invert'} button button-indicator button-sm w-30`}>
+                            Orbits
+                        </span>
+                    </div>
+                </div>
+
+                <div className="flex flex-col gap-5 border p-5 w-40 text-sm">
+                    <div>
+                        Simulation Speed:-
+                        <span className="opacity-50 text-[0.7em]">(WIP)</span>
+                    </div>
                     <input type="range" className="range pr-6 accent-white" />
                 </div>
             </div>
