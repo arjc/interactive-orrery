@@ -2,6 +2,8 @@
 
 This is a remake of the [project](https://www.github.com/nosebyte/nosebyte.github.io) made for a NASA Hackathon....
 
+![Tharakam Screenshot](https://github.com/arjc/interactive-orrery/blob/main/screenshot/tharakam.png)
+
 <div>
     <h2>What is Tharakam?</h2>
     <ul>
