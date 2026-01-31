@@ -1,8 +1,10 @@
-# Neo NEOs Orrery 2026
+![Tharakam Title](https://github.com/arjc/interactive-orrery/blob/main/public/transparent/title.png)
+
+# THARAKAM - Neo NEOs and Solar Orrery 2026
 
 This is a remake of the [project](https://www.github.com/nosebyte/nosebyte.github.io) made for a NASA Hackathon....
 
-![Tharakam Screenshot](https://github.com/arjc/interactive-orrery/blob/main/public/screenshot/tharakam.png)
+![Tharakam Web App Screenshot of solar system](https://github.com/arjc/interactive-orrery/blob/main/public/screenshot/tharakam.png)
 
 <div>
     <h2>What is Tharakam?</h2>
@@ -32,6 +34,17 @@ This is a remake of the [project](https://www.github.com/nosebyte/nosebyte.githu
     <li>I made it like this just for refference and to test out threejs functions.</li>
     </ul>
 </div>
+
+# Dependancies
+
+## tailwind@vite
+
+## three.js@vite
+## three.js/fiber
+## three.js/drei
+
+## gsap
+
 
 # Planet meashurement, scale and accuracy
 
