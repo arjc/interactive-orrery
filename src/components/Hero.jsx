@@ -7,6 +7,8 @@ const Hero = () => {
   const [overlayVisible, setOverlayVisibility] = useState(true);
 
   return (
+    <>
+    <div onClick={() => setOverlayVisibility(true)} className="button button-sm sm:button-md fixed top-1 left-1">Home</div>
     <div className={` ${overlayVisible ? "translate-y-0" : "translate-y-full"} 
                       fixed inset-0 flex flex-col items-center 
                       text-white transition-all duration-700 bg-gray-950 overflow-y-auto`}>
@@ -58,6 +60,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

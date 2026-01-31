@@ -31,16 +31,16 @@ const OrreryCanvas = () => {
             </Html>
 
             {solarPlanets.map((planet) => (
-                <>
+                <group key={planet.id}>
                     <RenderRadialRadialPath rad={planet.au * 14.96} col={planet.col} />
-                    <Html key={planet.name + "tag"} position={[planet.au * 14.96, 0, 0]}>
+                    <Html position={[planet.au * 14.96, 0, 0]}>
                         <span className="bg-gray-900 font-mono px-2" style={{color: planet.col}}>{planet.name}</span>
                     </Html>
 
-                    <Sphere key={planet.name + "name"} args={[planet.rau * 1496, 32, 32]} position={[planet.au * 14.96, 0, 0]}>
+                    <Sphere args={[planet.rau * 1496, 32, 32]} position={[planet.au * 14.96, 0, 0]}>
                         <meshStandardMaterial color={planet.col} />
                     </Sphere>
-                </>
+                </group>
             ))}
 
             <OrbitControls minDistance={5} maxDistance={1000} />
