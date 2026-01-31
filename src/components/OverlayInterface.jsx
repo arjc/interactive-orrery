@@ -42,9 +42,12 @@ const OverlayInterface = ({ isComponentVisible, closeOverlay }) => {
             <div className="my-20">
               <h1 className="gimme-head-sm">Is this how really it looks in space?</h1>
               <ul>
-                <li>No, not per se... The scale of this orrery is very rough and calulalations have an average of &plusmn; 0.22% variation.</li>
-                <li>I calculate the planet's radius and length bu using the astronaumical unit (AU) and take difference with the earth's AU to in 2 decimal places.</li>
+                <li>No, not per se; The scale of this orrery is very rough and calulalations have an average of &plusmn; 0.22% variation.</li>
+                <li>I calculate the planet's radius and length bu using their astronaumical unit (AU) multiply them with 149.6 miln (earth's AU or just AU) to in 2 decimal places.</li>
                 <li>This is the main cause of the variation and it is there due to simple performance optimisations.</li>
+                <li>Another big flaw is that planets have eliptical orbits and move about with different velocities depending on the gravitational forces acting on it </li>
+                <li>And they dont revolve around on the same plane angle...</li>
+                <li>I made it like this just for refference and to test out threejs functions.</li>
               </ul>
             </div>
 
