@@ -27,7 +27,7 @@ const OrreryCanvas = ({ isOrbitVisible, isLabelVisible }) => {
             {/* Suryan */}
             {isLabelVisible &&
                 <Html key={"suryan"} position={[0, 0, 0]} zIndexRange={[0, 0]}>
-                    <span className="text-white bg-gray-900 font-mono px-2">Sun</span>
+                    <span className="text-white bg-gray-900 font-mono px-2 text-[0.8em]">Sun</span>
                 </Html>
             }
             <Sphere args={[0.0465 * 14.96, 32, 32]} position={[0, 0, 0]}>
