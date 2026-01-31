@@ -1,15 +1,13 @@
-import { useState } from "react"
 import tharakam from '/transparent/title.png'
 import Cookie from "./Cookie"
 import Footer from "./Footer"
 
-const OverlayInterface = () => {
-  const [overlayVisible, setOverlayVisibility] = useState(true);
+const OverlayInterface = ({isComponentVisible, closeOverlay}) => {
+
 
   return (
     <>
-      <div onClick={() => setOverlayVisibility(true)} className="button button-sm sm:button-md fixed top-1 left-1">Home</div>
-      <div className={` ${overlayVisible ? "translate-y-0" : "translate-y-full"} 
+      <div className={` ${isComponentVisible ? "translate-y-0" : "translate-y-full"} 
                       fixed inset-0 flex flex-col items-center 
                       text-white transition-all duration-700 bg-gray-950 overflow-y-auto`}>
 
@@ -19,7 +17,7 @@ const OverlayInterface = () => {
         </div>
 
         <div className="flex flex-col items-center gap-5">
-          <span onClick={() => setOverlayVisibility(false)} className="button button-sm">Enter</span>
+          <span onClick={closeOverlay} className="button button-sm">Enter</span>
         </div>
 
         <div>

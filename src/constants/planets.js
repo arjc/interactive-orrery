@@ -7,11 +7,11 @@
 // Problem: I only use two decimal points so the precision is lower and room for error is more
 
 // ie., au of mercury = 0.39
-// distance of mercury from sun = 57,900,000 
+// distance of mercury from sun = 57,900,000
 // distance of earth from sun = 149,600,000 = 1 AU
 // 149,600,000 * 0.39 = 58,344,000
 
-// since error is modulus of [(meashured - correct ) / correct] * 100 
+// since error is modulus of [(meashured - correct ) / correct] * 100
 // total tolarance of mercury will be = +- 0.77%
 
 // similarly, if we take the average of all planets we get +- 0.22% to be the tolerance of this method, which is to be noted for accurate scale...
@@ -20,28 +20,27 @@
 // 149,600,000 * au = planet distance
 // 149,600,000 * rau = planet radius
 
-
-export const solarPlanets = [
+export let solarPlanets = [
   {
     id: 1,
     name: "Mercury",
-    col: "#B1B1B1", // BIBI KUTTY REFERENCE 
+    col: "#B1B1B1", // BIBI KUTTY REFERENCE
     au: 0.387,
-    rau: 0.0000185, 
+    rau: 0.0000185,
   },
   {
     id: 2,
     name: "Venus",
     col: "#EED5B7",
     au: 0.723,
-    rau: 0.0000475, 
+    rau: 0.0000475,
   },
   {
     id: 3,
     name: "Earth",
-    col: "#A2653E",
+    col: "#FFB700",
     au: 1,
-    rau: 0.0000405, 
+    rau: 0.0000405,
   },
   {
     id: 4,
@@ -79,9 +78,6 @@ export const solarPlanets = [
     rau: 0.000165,
   },
 ];
-
-
-
 
 // <PlanetPath rad={3.9} col={'#ff0'} />
 // {/* Mercury */}
