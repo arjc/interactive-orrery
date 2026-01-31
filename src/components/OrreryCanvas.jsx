@@ -25,7 +25,7 @@ const OrreryCanvas = () => {
             <Sphere args={[2, 32, 32]} position={[0, 0, 0]}>
                 <meshStandardMaterial color="#fff" />
             </Sphere>
-            <Html key={"suryan"} position={[0, 0, 0]}>
+            <Html key={"suryan"} position={[0, 0, 0]} zIndexRange={[0, 0]}>
                 <span className="text-white bg-gray-900 font-mono px-2">Sun</span>
             </Html>
 
@@ -33,7 +33,7 @@ const OrreryCanvas = () => {
                 <group key={planet.id}>
                     <RenderRadialRadialPath rad={planet.au * 14.96} col={planet.col} />
 
-                    <Html position={[planet.au * 14.96, 0, 0]}>
+                    <Html position={[planet.au * 14.96, 0, 0]} zIndexRange={[0, 0]}>
                         <span className="bg-gray-900 font-mono px-2 text-[0.75rem]" style={{color: planet.col}}>{planet.name}</span>
                     </Html>
 
