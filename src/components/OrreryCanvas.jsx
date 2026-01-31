@@ -1,7 +1,6 @@
 import { Canvas } from "@react-three/fiber"
 import { Html, Line, Sphere, OrbitControls } from "@react-three/drei"
 import { solarPlanets } from "../constants/planets"
-import { plane } from "three/examples/jsm/Addons.js"
 
 function RenderRadialRadialPath({ rad, col = "#fff" }) {
     const points = []
@@ -33,8 +32,9 @@ const OrreryCanvas = () => {
             {solarPlanets.map((planet) => (
                 <group key={planet.id}>
                     <RenderRadialRadialPath rad={planet.au * 14.96} col={planet.col} />
+
                     <Html position={[planet.au * 14.96, 0, 0]}>
-                        <span className="bg-gray-900 font-mono px-2" style={{color: planet.col}}>{planet.name}</span>
+                        <span className="bg-gray-900 font-mono px-2 text-[0.75rem]" style={{color: planet.col}}>{planet.name}</span>
                     </Html>
 
                     <Sphere args={[planet.rau * 1496, 32, 32]} position={[planet.au * 14.96, 0, 0]}>

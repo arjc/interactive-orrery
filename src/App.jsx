@@ -1,11 +1,13 @@
-import Hero from "./components/Hero.jsx"
+import OverlayInterface from "./components/OverlayInterface.jsx"
 import OrreryCanvas from "./components/OrreryCanvas.jsx"
+import ControlPanel from "./components/ControlPanel.jsx"
 
 function App() {
   return (
     <>
-      <OrreryCanvas className="-z-1"/>
-      <Hero className="z-99"/>
+      <OrreryCanvas />
+      <ControlPanel />
+      <OverlayInterface />
     </>
   )
 }
