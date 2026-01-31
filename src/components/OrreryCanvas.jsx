@@ -9,7 +9,7 @@ function RenderRadialRadialPath({ rad, col = "#fff" }) {
         const theta = (i / nLineSegments) * Math.PI * 2
         points.push([Math.cos(theta) * rad, 0, Math.sin(theta) * rad])
     }
-    return <Line points={points} color={col} lineWidth={1.25} transparent opacity={1} />
+    return <Line points={points} color={col} lineWidth={0.25} transparent opacity={1} />
 }
 
 
@@ -23,6 +23,15 @@ const OrreryCanvas = ({ isOrbitVisible, isLabelVisible }) => {
             >
             <ambientLight intensity={0.3} />
             <pointLight intensity={10000} position={[0, 0, 0]} />
+
+            {/* Fake sunlight */}
+            <pointLight intensity={30} position={[2, 0, 0]} />
+            <pointLight intensity={30} position={[0, 2, 0]} />
+            <pointLight intensity={30} position={[0, 0, 2]} />
+            <pointLight intensity={30} position={[-2, 0, 0]} />
+            <pointLight intensity={30} position={[0, -2, 0]} />
+            <pointLight intensity={30} position={[0, 0, -2]} />
+
 
             {/* Suryan */}
             {isLabelVisible &&

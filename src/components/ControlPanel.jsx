@@ -3,7 +3,7 @@ import tharakam from "/transparent/title.png"
 const ControlPanel = ({ showOverlay, toggleOrbit, isOrbitVisible, toggleLabel, isLabelVisible, resetView }) => {
 
     return (
-        <div className="text-white fixed w-screen max-h-[30vh] text-[0.6em] md:text-[1em] md:h-screen md:w-auto bottom-0 md:top-0 left-0 
+        <div className="text-white fixed w-screen max-h-[30vh] text-[0.6em] md:text-[1em] md:max-h-screen md:w-auto bottom-0 md:top-0 left-0 
                           flex flex-col gap-3 md:gap-5 items-center bg-[#0005] border-t-2 md:border-r-2 md:border-t-0 p-5 md:p-10">
             <div className="hidden md:flex my-10">
                 <img src={tharakam} alt="tharakam logo" className="w-60" />
