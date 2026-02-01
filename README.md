@@ -45,6 +45,24 @@ This is a remake of the [project](https://www.github.com/nosebyte/nosebyte.githu
 
 ## gsap
 
+# ThreeJs Setup
+
+## Scene, Camera, Renderer
+Documentation pending...
+
+## Camera Controls 
+Documentation pending...
+
+# Planet, Orbit and Lighting 
+
+## Planet creation
+
+Each planet has a spherical mesh with their own radius, and material-colour. 
+
+```
+
+
+```
 
 ## Planet orbit creation
 
@@ -52,11 +70,11 @@ There isn't a single mesh to create a ring or torus like in blender...
 
 So we used the line segments to make circular orbits. 
 
-The function takes two arguments:
-rad = radius in au
-col = colour hex string value
+The function takes two arguments: <br />
+rad = radius in au <br />
+col = colour hex string value <br />
 
-The function returns a threejs drei component <Line />;
+The function returns a threejs drei component &lt;Line /&gt;;
 which is a mesh of a line segment.
 
 ```
@@ -70,6 +88,11 @@ const renOrbitPath = ({ rad, col = "#fff" }) => {
     return <Line points={points} color={col} lineWidth={0.25} transparent opacity={1} />
 }
 ```
+## Planet Label
+ThreeJs drei has an `&lt;HTML /&gt;` component which allows the canvas to render two dimensional html to the canvas.
+
+It's position can be fixed on the 3d canvas and it'll show the HTML's orthographic projection on the screen.
+
 
 # Planet meashurement, scale and accuracy
 
