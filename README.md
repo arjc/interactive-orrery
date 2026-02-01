@@ -63,9 +63,12 @@ Each planets object is stored in an array named solar planets.
 
 The planet array is mapped from bottom to top to a non-deconstructed object called planet, and contain data within a group to render their Spherical Mesh, Html Label and Orbit component.
 
+I have setup conditional rendering for label and orbit which toggles as the `isOrbitVisible` and `isLabelVisible`
+react states changes.
+
 
 ```
-            {[...solarPlanets].reverse().map((planet) => (
+[...solarPlanets].reverse().map((planet) => (
                 <group key={planet.id}>
                     {isOrbitVisible && <RenderRadialRadialPath rad={planet.au * 14.96} col={planet.col} />}
                     {isLabelVisible &&
@@ -77,7 +80,8 @@ The planet array is mapped from bottom to top to a non-deconstructed object call
                         <meshStandardMaterial color={planet.col} />
                     </Sphere>
                 </group>
-            ))}
+   )
+)
 
 ```
 
