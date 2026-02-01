@@ -46,6 +46,31 @@ This is a remake of the [project](https://www.github.com/nosebyte/nosebyte.githu
 ## gsap
 
 
+## Planet orbit creation
+
+There isn't a single mesh to create a ring or torus like in blender...
+
+So we used the line segments to make circular orbits. 
+
+The function takes two arguments:
+rad = radius in au
+col = colour hex string value
+
+The function returns a threejs drei component <Line />;
+which is a mesh of a line segment.
+
+```
+const renOrbitPath = ({ rad, col = "#fff" }) => {
+    const points = []
+    const nLineSegments = 64
+    for (let i = 0; i <= nLineSegments; i++) {
+        const theta = (i / nLineSegments) * Math.PI * 2
+        points.push([Math.cos(theta) * rad, 0, Math.sin(theta) * rad])
+    }
+    return <Line points={points} color={col} lineWidth={0.25} transparent opacity={1} />
+}
+```
+
 # Planet meashurement, scale and accuracy
 
 ## All planets are to scale as per the nasa
