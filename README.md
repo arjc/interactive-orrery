@@ -57,10 +57,27 @@ Documentation pending...
 
 ## Planet creation
 
-Each planet has a spherical mesh with their own radius, and material-colour. 
+I have stored all the data of each planets in the `src/constants/planet.js` file.
+
+Each planets object is stored in an array named solar planets.
+
+The planet array is mapped from bottom to top to a non-deconstructed object called planet, and contain data within a group to render their Spherical Mesh, Html Label and Orbit component.
+
 
 ```
-
+            {[...solarPlanets].reverse().map((planet) => (
+                <group key={planet.id}>
+                    {isOrbitVisible && <RenderRadialRadialPath rad={planet.au * 14.96} col={planet.col} />}
+                    {isLabelVisible &&
+                        <Html position={[planet.au * 14.96, 0, 0]} zIndexRange={[0, 0]}>
+                            <span className="bg-gray-900 font-mono px-2 text-[0.75rem]" style={{ color: planet.col }}>{planet.name}</span>
+                        </Html>
+                    }
+                    <Sphere args={[planet.rau * 1496, 32, 32]} position={[planet.au * 14.96, 0, 0]}>
+                        <meshStandardMaterial color={planet.col} />
+                    </Sphere>
+                </group>
+            ))}
 
 ```
 
