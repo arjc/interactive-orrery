@@ -35,6 +35,8 @@ This is a remake of the [project](https://www.github.com/nosebyte/nosebyte.githu
     </ul>
 </div>
 
+<p>I will make sure to make it more accurate by the end</p>
+
 # Dependancies
 
 ## tailwind@vite
